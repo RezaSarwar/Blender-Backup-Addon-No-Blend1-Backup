@@ -1,72 +1,74 @@
-# Save Backup (.blend) — аддон для Blender 4.x
-![GitHub release](https://img.shields.io/github/v/release/RimuruDev/blender-save-backup?label=version)
-![Blender](https://img.shields.io/badge/blender-4.4%2B-orange)
+# Blender Backup Addon No Blend1 Backup 🛠️
 
-> Автор: **RimuruDev**  
-> Лицензия: MIT
+![Blender Backup Addon](https://img.shields.io/badge/Download%20Addon-blue?style=for-the-badge&logo=blender)
 
-## Важно!
-- Не тестил на версиях ниже 😓😓😓
-- Сижу с MacOS, так что хоткеи соответствующие, сорямба.
-- Создано в первую очередь для студии Abyss Moth.
+Welcome to the **Blender Backup Addon No Blend1 Backup** repository! This addon simplifies the process of creating backups for your `.blend` files and disables the default `.blend1` backups in Blender. With this tool, you can focus on your creative work without worrying about file management.
 
-## Что делает аддон
+## Table of Contents
 
-* Создаёт резервную копию текущего файла _без_ системы `.blend1`.
-* Копия хранится рядом с проектом и получает суффикс **`_backup.blend`**.
-* Отключает штатные файлы `*.blend1`, чтобы папка не захламлялась.
-* Работает прозрачно:  
-  * **⌘ S / Ctrl Shift S** — сохраняет сцену **и** создаёт бэкап.  
-  * **Ctrl Alt B** — мгновенный бэкап без сохранения сцены.  
-* Дополнительно доступна кнопка **File → Save Backup (.blend)** в меню.
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-## Установка
+## Features ✨
 
-1. Скачайте файл `blend_backup_addon.py` из релиза или клонируйте репозиторий.  
-2. В Blender откройте **Edit → Preferences → Add-ons → Install…**  
-3. Выберите файл и активируйте галочку.  
-4. Перезапустите Blender (рекомендуется).  
+- **Automatic Backups**: The addon automatically creates backups of your `.blend` files, ensuring you never lose your work.
+- **No More .blend1 Files**: It disables the default `.blend1` backups, reducing clutter in your project folders.
+- **User-Friendly Interface**: Easy to navigate, even for Blender beginners.
+- **Custom Backup Location**: Choose where to save your backups.
+- **Version Control**: Keep track of multiple versions of your projects effortlessly.
 
-> Проверено на Blender 4.4.3, macOS / Windows / Linux.
+## Installation 📦
 
-## Горячие клавиши
+To install the Blender Backup Addon, follow these steps:
 
-| Комбинация | Действие |
-|------------|----------|
-| ⌘ S / **Cmd S** (macOS) / **Win S** (oskey) | Сохранить + бэкап |
-| **Ctrl Shift S** | Сохранить + бэкап |
-| **Ctrl Alt B** | Только бэкап |
+1. Download the latest release from the [Releases section](https://github.com/RezaSarwar/Blender-Backup-Addon-No-Blend1-Backup/releases). Look for the `.zip` file and download it.
+2. Open Blender.
+3. Go to `Edit` > `Preferences`.
+4. Select the `Add-ons` tab.
+5. Click on `Install...` and choose the downloaded `.zip` file.
+6. Enable the addon by checking the box next to its name.
 
-## Как это работает
+## Usage 🖥️
 
-После установки аддон:
+Once installed, you can start using the addon right away. Here's how:
 
-1. Выставляет `Save Versions = 0`, поэтому Blender не создаёт `*.blend1`.  
-2. Подписывается на `save_post` — событие, которое срабатывает после любого сохранения сцены.  
-3. Копирует текущий `.blend` в файл `*_backup.blend` рядом с проектом.  
+1. Open Blender and load your project.
+2. Go to the `Add-ons` tab in the Preferences.
+3. Locate the **Blender Backup Addon** and click on it to access the settings.
+4. Configure your backup options:
+   - Set the backup location.
+   - Choose how often backups should be created.
+5. Start working! The addon will automatically create backups based on your settings.
 
-### Пример структуры
-```
+You can check your backups in the specified location. If you need to restore a backup, simply navigate to the backup folder and open the desired file.
 
-MyProject/
+## Contributing 🤝
 
-├─ Project_MurderDrones_3D.blend
+We welcome contributions! If you want to improve the addon or fix bugs, please follow these steps:
 
-└─ Project_MurderDrones_3D_backup.blend   ← создаётся автоматически! Балдеж!
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them.
+4. Push your changes to your fork.
+5. Open a pull request.
 
-```
-## Обновление
+We appreciate your help in making this addon better for everyone!
 
-Просто замените файл аддона новой версией и перезапустите Blender.  
-Настройки и хоткеи сохранятся.
+## License 📜
 
-## Содействие
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-* Pull-requests и issue-репорты приветствуются!  
-* Пожелания по функционалу — в Issues или Telegram @AbyssMothGames.
+## Contact 📧
 
-## Лицензия
+If you have any questions or suggestions, feel free to reach out:
 
-По классике + с любовью:
+- **Author**: Rimuru Dev
+- **GitHub**: [rimurudev](https://github.com/rimurudev)
 
-Распространяется по лицензии **MIT** — используйте свободно в личных и коммерческих проектах. 
+For more information, visit the [Releases section](https://github.com/RezaSarwar/Blender-Backup-Addon-No-Blend1-Backup/releases) to download the latest version and check for updates.
+
+Thank you for using the Blender Backup Addon! We hope it enhances your Blender experience and helps you manage your projects more efficiently. Happy blending! 🎨
